@@ -1,0 +1,91 @@
+seed,contract,class,truth,prob,pred
+0,VaultVulnerable.sol,Reentrancy,1,0.9743417501449585,1
+0,VaultVulnerable.sol,Timestamp Dependency,0,0.0002396855124970898,0
+0,VaultVulnerable.sol,Arithmetic Error,0,0.00012422642612364143,0
+0,VaultSafe.sol,Reentrancy,0,0.012961245141923428,0
+0,VaultSafe.sol,Timestamp Dependency,0,9.615301678422838e-05,0
+0,VaultSafe.sol,Arithmetic Error,0,0.00025897964951582253,0
+0,RaffleVulnerable.sol,Reentrancy,0,1.5810097675483803e-10,0
+0,RaffleVulnerable.sol,Timestamp Dependency,1,0.9311791062355042,1
+0,RaffleVulnerable.sol,Arithmetic Error,0,3.129309698124416e-05,0
+0,RaffleSafe.sol,Reentrancy,0,0.01792708784341812,0
+0,RaffleSafe.sol,Timestamp Dependency,0,0.004257509019225836,0
+0,RaffleSafe.sol,Arithmetic Error,0,8.791031973487407e-07,0
+0,LedgerVulnerable.sol,Reentrancy,0,7.214501238195226e-05,0
+0,LedgerVulnerable.sol,Timestamp Dependency,0,0.0020754209253937006,0
+0,LedgerVulnerable.sol,Arithmetic Error,1,0.9987186193466187,1
+0,LedgerSafe.sol,Reentrancy,0,0.00033666397212073207,0
+0,LedgerSafe.sol,Timestamp Dependency,0,7.682119030505419e-05,0
+0,LedgerSafe.sol,Arithmetic Error,0,1.146356453318731e-06,0
+1,VaultVulnerable.sol,Reentrancy,1,0.991048276424408,1
+1,VaultVulnerable.sol,Timestamp Dependency,0,3.552690031938255e-05,0
+1,VaultVulnerable.sol,Arithmetic Error,0,0.001439037499949336,0
+1,VaultSafe.sol,Reentrancy,0,0.09624473750591278,0
+1,VaultSafe.sol,Timestamp Dependency,0,5.229269663686864e-05,0
+1,VaultSafe.sol,Arithmetic Error,0,0.00030288880225270987,0
+1,RaffleVulnerable.sol,Reentrancy,0,1.8337454222184385e-13,0
+1,RaffleVulnerable.sol,Timestamp Dependency,1,0.9720630645751953,1
+1,RaffleVulnerable.sol,Arithmetic Error,0,4.1386949305888265e-05,0
+1,RaffleSafe.sol,Reentrancy,0,0.0003014897520188242,0
+1,RaffleSafe.sol,Timestamp Dependency,0,0.0031731955241411924,0
+1,RaffleSafe.sol,Arithmetic Error,0,0.0001294255635002628,0
+1,LedgerVulnerable.sol,Reentrancy,0,0.012406624853610992,0
+1,LedgerVulnerable.sol,Timestamp Dependency,0,0.002956659998744726,0
+1,LedgerVulnerable.sol,Arithmetic Error,1,0.9983794689178467,1
+1,LedgerSafe.sol,Reentrancy,0,0.00010859132453333586,0
+1,LedgerSafe.sol,Timestamp Dependency,0,6.945020868442953e-05,0
+1,LedgerSafe.sol,Arithmetic Error,0,4.080058261024533e-06,0
+2,VaultVulnerable.sol,Reentrancy,1,0.968082845211029,1
+2,VaultVulnerable.sol,Timestamp Dependency,0,0.00022627488942816854,0
+2,VaultVulnerable.sol,Arithmetic Error,0,5.151339792064391e-05,0
+2,VaultSafe.sol,Reentrancy,0,0.029637709259986877,0
+2,VaultSafe.sol,Timestamp Dependency,0,0.0001069202771759592,0
+2,VaultSafe.sol,Arithmetic Error,0,0.000429884297773242,0
+2,RaffleVulnerable.sol,Reentrancy,0,1.9617236723945553e-09,0
+2,RaffleVulnerable.sol,Timestamp Dependency,1,0.9028564095497131,1
+2,RaffleVulnerable.sol,Arithmetic Error,0,0.00043919478775933385,0
+2,RaffleSafe.sol,Reentrancy,0,0.01975966989994049,0
+2,RaffleSafe.sol,Timestamp Dependency,0,0.008327126502990723,0
+2,RaffleSafe.sol,Arithmetic Error,0,2.108329454131308e-06,0
+2,LedgerVulnerable.sol,Reentrancy,0,3.743349225260317e-05,0
+2,LedgerVulnerable.sol,Timestamp Dependency,0,0.0007227829773910344,0
+2,LedgerVulnerable.sol,Arithmetic Error,1,0.9992172718048096,1
+2,LedgerSafe.sol,Reentrancy,0,0.0005787155241705477,0
+2,LedgerSafe.sol,Timestamp Dependency,0,0.00014841021038591862,0
+2,LedgerSafe.sol,Arithmetic Error,0,5.48967182112392e-06,0
+3,VaultVulnerable.sol,Reentrancy,1,0.968336284160614,1
+3,VaultVulnerable.sol,Timestamp Dependency,0,0.00021757699141744524,0
+3,VaultVulnerable.sol,Arithmetic Error,0,0.00014210112567525357,0
+3,VaultSafe.sol,Reentrancy,0,0.015684673562645912,0
+3,VaultSafe.sol,Timestamp Dependency,0,9.012281225295737e-05,0
+3,VaultSafe.sol,Arithmetic Error,0,0.00039558482239954174,0
+3,RaffleVulnerable.sol,Reentrancy,0,4.4153500300403437e-10,0
+3,RaffleVulnerable.sol,Timestamp Dependency,1,0.9082196354866028,1
+3,RaffleVulnerable.sol,Arithmetic Error,0,4.52145905001089e-05,0
+3,RaffleSafe.sol,Reentrancy,0,0.0002176276029786095,0
+3,RaffleSafe.sol,Timestamp Dependency,0,0.015418247319757938,0
+3,RaffleSafe.sol,Arithmetic Error,0,3.383279818081064e-06,0
+3,LedgerVulnerable.sol,Reentrancy,0,0.00011662082397378981,0
+3,LedgerVulnerable.sol,Timestamp Dependency,0,0.0015508676879107952,0
+3,LedgerVulnerable.sol,Arithmetic Error,1,0.9987034797668457,1
+3,LedgerSafe.sol,Reentrancy,0,5.4184165492188185e-05,0
+3,LedgerSafe.sol,Timestamp Dependency,0,0.00011293848365312442,0
+3,LedgerSafe.sol,Arithmetic Error,0,2.9262887437653262e-06,0
+4,VaultVulnerable.sol,Reentrancy,1,0.962889552116394,1
+4,VaultVulnerable.sol,Timestamp Dependency,0,6.048108116374351e-05,0
+4,VaultVulnerable.sol,Arithmetic Error,0,0.0003325104189570993,0
+4,VaultSafe.sol,Reentrancy,0,0.027883073315024376,0
+4,VaultSafe.sol,Timestamp Dependency,0,5.290251283440739e-05,0
+4,VaultSafe.sol,Arithmetic Error,0,0.0006339275860227644,0
+4,RaffleVulnerable.sol,Reentrancy,0,8.909403076406974e-11,0
+4,RaffleVulnerable.sol,Timestamp Dependency,1,0.9361720681190491,1
+4,RaffleVulnerable.sol,Arithmetic Error,0,7.456647290382534e-05,0
+4,RaffleSafe.sol,Reentrancy,0,0.0004173681081738323,0
+4,RaffleSafe.sol,Timestamp Dependency,0,0.003295896342024207,0
+4,RaffleSafe.sol,Arithmetic Error,0,2.276425448144437e-06,0
+4,LedgerVulnerable.sol,Reentrancy,0,8.245948993135244e-05,0
+4,LedgerVulnerable.sol,Timestamp Dependency,0,0.0020485275890678167,0
+4,LedgerVulnerable.sol,Arithmetic Error,1,0.9995027780532837,1
+4,LedgerSafe.sol,Reentrancy,0,0.00022283918224275112,0
+4,LedgerSafe.sol,Timestamp Dependency,0,7.930590800242499e-05,0
+4,LedgerSafe.sol,Arithmetic Error,0,2.115985807904508e-06,0
