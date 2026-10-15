@@ -4,7 +4,7 @@ A research prototype that audits Solidity contracts for three vulnerability clas
 
 **Author:** [Student Name], Student ID [Student ID]. The manuscript is `manuscript/FINAL_PROJECT_StudentID_FullName.pdf`; the slides are in `slides/`.
 
-**Short version of the result:** the model fits its six training contracts perfectly, but under leave-one-contract-out it flags none of the held-out vulnerable contracts. A rule that flags any contract containing the relevant sink has higher recall. See `results/metrics.json` and `notebooks/02_loco_evaluation.ipynb`.
+**Short version of the result:** the model fits its six training contracts perfectly, but under leave-one-contract-out it flags none of the held-out vulnerable contracts. A rule that flags any contract containing the relevant sink has higher recall. On six new contracts the trained model finds all three vulnerable ones, but that test informed an arithmetic fix, so it is not an independent result. See `results/metrics.json`, `results/external_test/metrics.json`, and `notebooks/02_loco_evaluation.ipynb` and `notebooks/04_external_test.ipynb`.
 
 ## Submitted version
 
@@ -29,13 +29,14 @@ Run from the repository root.
 python auditor.py --contract demo_contracts/ReentrancyVulnerable.sol
 python trainer.py
 python evaluate.py
+python evaluate_external.py
 ```
 
 | Step | What it writes | Expected |
 |---|---|---|
-| `auditor.py` | console report | Reentrancy 99.21%; lines 015 and 016 flagged |
-| `trainer.py` | `model.pth`, console log | final loss 0.2870 at epoch 100 |
-| `evaluate.py` | `results/`, `figures/` | GAT leave-one-out recall 0.000; sink rule recall 1.000 |
+| `auditor.py` | console report | Reentrancy 58.29% (in-sample, flagged); lines 015 and 016 |
+| `trainer.py` | `model.pth`, console log | final loss 0.2216 at epoch 100 |
+| `evaluate.py` | `results/`, `figures/` | GAT leave-one-out recall 0.000; sink rule recall 1.000; external test GAT recall 1.000 |
 
 Add `--visualize` to `auditor.py` to save `<name>_audit.png` in the current directory (copies of the three committed images are in `figures/`).
 
@@ -46,6 +47,7 @@ Add `--visualize` to `auditor.py` to save `<name>_audit.png` in the current dire
 | `notebooks/01_reproduce_audit.ipynb` | Audits all six demo contracts with the saved weights |
 | `notebooks/02_loco_evaluation.ipynb` | Runs the leave-one-contract-out evaluation against two baselines and shows the tables and figures |
 | `notebooks/03_error_analysis.ipynb` | Lists each error by method, and compares audit outputs before and after the label fix |
+| `notebooks/04_external_test.ipynb` | Trains on the demo contracts and scores the six new contracts in `test_contracts/` |
 
 All three are executed and their outputs are saved in the files.
 
@@ -80,6 +82,8 @@ All three are executed and their outputs are saved in the files.
 | `trainer.py` | Trains the model and writes `model.pth` |
 | `auditor.py` | Audits a single contract with the trained model |
 | `evaluate.py` | Leave-one-contract-out evaluation, baselines, figures |
+| `evaluate_external.py` | Trains on the demo contracts and scores the new contracts in `test_contracts/` |
+| `test_contracts/` | Six new contracts used for the external test |
 | `demo_contracts/` | Six demo contracts: a vulnerable and a safe version of each class |
 | `model.pth` | Trained weights (corrected labels; see `FAILURE_LOG.md`) |
 

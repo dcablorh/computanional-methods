@@ -61,3 +61,14 @@ Problems found while preparing this project, what they affected, and what was do
 ### F11. Claims in the README were out of date
 
 - The README's expected output (confidence 99.10%) and paper figures came from the pre-fix weights. They were updated after the retrain.
+
+### F12. Compound assignments were invisible to the arithmetic check
+
+- **Found:** on the external test set (`test_contracts/LedgerVulnerable.sol`, an unchecked `-=` in solc 0.7.6). The GAT scored it 0.000 in every seed, and the sink rule found no arithmetic sink.
+- **Cause:** the parser represents `+=`, `-=`, `*=` and `/=` as `Assignment` nodes. Both the sink check and the arithmetic feature looked only at `BinaryOperation`.
+- **Fix:** both now also accept compound assignments (`slicing/slicer.py`, `model/gnn.py`).
+- **Effect (re-run, see `results/logs/before_arithmetic_fix/` for the earlier numbers):**
+  - External test: the GAT now scores `LedgerVulnerable.sol` at 0.999 for Arithmetic, and the external-test metrics are P 1.000, R 1.000, F1 1.000. The sink rule drops to P 0.300 (7 false positives).
+  - Demo set, in-sample: `ReentrancyVulnerable.sol` falls from 99.2% to 58.3% Reentrancy confidence; `ReentrancySafe.sol` gets 12.7% Timestamp and `TimestampSafe.sol` 28.8% Timestamp. Slices grew, because `+=` and `-=` in safe contracts now also seed the slice (for example `ArithmeticSafe.sol` from 20 to 43 nodes).
+  - Leave-one-contract-out: unchanged. GAT recall stays 0.000; the sink rule drops to P 0.333 (6 false positives).
+- **Test-set contamination:** the test contracts were used to find this defect, so the external-test result after the fix is **not** an independent held-out result. A new untouched test set is needed to check the fix.

@@ -35,7 +35,7 @@ Results are in `results/metrics.json` and `notebooks/02_loco_evaluation.ipynb`.
 | Evaluation | Precision | Recall | F1 | Accuracy |
 |---|---|---|---|---|
 | Trained and tested on the same six contracts (saved weights, 18 decisions) | 1.000 | 1.000 | 1.000 | 1.000 |
-| Leave-one-contract-out, mean of 5 seeds (18 decisions) | 0.000 | 0.000 | 0.000 | 0.767 (std 0.022) |
+| Leave-one-contract-out, mean of 5 seeds (18 decisions) | 0.000 | 0.000 | 0.000 | 0.778 (identical across seeds) |
 
 The first row measures how well the model fits its training data. The second row is the number that matters for unseen contracts: the model does not flag any held-out vulnerable contract. Localization under leave-one-out is 0 for all 15 vulnerable-contract evaluations (3 contracts × 5 seeds).
 

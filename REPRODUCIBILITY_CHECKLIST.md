@@ -20,10 +20,11 @@ Tick each item after running it on a clean clone.
 
 | Step | Command | Output checked |
 |---|---|---|
-| Audit one contract | `python auditor.py --contract demo_contracts/ReentrancyVulnerable.sol` | Reentrancy 99.21%; lines 15 and 16 |
-| Retrain | `python trainer.py` | Final loss 0.2870 at epoch 100; saves `model.pth` |
-| Full evaluation | `python evaluate.py` | `results/metrics.json`; GAT LOCO recall 0.000; sink rule recall 1.000 |
-| Notebooks | run `notebooks/01_reproduce_audit.ipynb` to `03_error_analysis.ipynb` in order | No error outputs (checked) |
+| Audit one contract | `python auditor.py --contract demo_contracts/ReentrancyVulnerable.sol` | Reentrancy 58.29%; lines 15 and 16 |
+| Retrain | `python trainer.py` | Final loss 0.2216 at epoch 100; saves `model.pth` |
+| Full evaluation | `python evaluate.py` | `results/metrics.json`; GAT LOCO recall 0.000; sink rule recall 1.000; `evaluate_external.py` for the new-contract test |
+| External test | `python evaluate_external.py` | `results/external_test/metrics.json`; not an independent result (see README) |
+| Notebooks | run `notebooks/01_reproduce_audit.ipynb` to `04_external_test.ipynb` in order | No error outputs (checked) |
 
 - [x] Each command above was run and its output matches the table.
 - [x] Committed outputs (`results/`, `figures/`) match the last run.
