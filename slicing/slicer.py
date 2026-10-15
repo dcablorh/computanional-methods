@@ -24,7 +24,9 @@ def find_interest_points(G):
             timestamp_refs.append(node_id)
             
         if node_type == "BinaryOperation":
-            op = data.get("ast_node", {}).get("operator", "")
+            ast_node = data.get("ast_node", {})
+            # Legacy AST (solc < 0.8) stores the operator under "attributes"
+            op = ast_node.get("operator") or ast_node.get("attributes", {}).get("operator", "")
             if op in ("+", "-", "*", "/"):
                 arithmetic_ops.append(node_id)
                 
