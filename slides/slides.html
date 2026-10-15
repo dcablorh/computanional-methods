@@ -20,15 +20,15 @@
   .title-slide .sub { font-size: 20pt; color: var(--muted); max-width: 11in; }
   .meta { position:absolute; bottom: 0.4in; left: 0.75in; font-size: 12pt; color: var(--muted); }
   .num { position:absolute; bottom: 0.4in; right: 0.75in; font-size: 12pt; color: var(--muted); }
-  table { border-collapse: collapse; width: 100%; font-size: 15pt; margin-top: 6pt; }
-  th, td { border-bottom: 1px solid var(--rule); padding: 7px 9px; text-align: left; }
+  table { border-collapse: collapse; width: 100%; font-size: 14pt; margin-top: 6pt; }
+  th, td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; }
   th { color: var(--muted); font-weight: 600; }
   td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
-  .callout { border-left: 5px solid var(--accent); background:#f3f7fd; padding: 12px 18px; margin-top: 18px; font-size: 17pt; }
+  .callout { border-left: 5px solid var(--accent); background:#f3f7fd; padding: 12px 18px; margin-top: 18px; font-size: 16pt; }
   .warn { border-left-color: var(--warn); background:#fdf3f2; }
   .cols { display:flex; gap: 0.5in; }
   .cols > div { flex:1; }
-  .big { font-size: 60pt; font-weight: 700; color: var(--accent); line-height: 1; }
+  .big { font-size: 56pt; font-weight: 700; color: var(--accent); line-height: 1; }
   .bigl { font-size: 14pt; color: var(--muted); margin-top: 6pt; }
   .flow { display:flex; align-items:center; gap: 12px; margin-top: 18px; flex-wrap: wrap; }
   .box { border: 2px solid var(--accent); border-radius: 8px; padding: 12px 14px; font-size: 15pt; min-width: 1.9in; text-align:center; background:#fff; }
@@ -42,7 +42,7 @@
 <section class="slide title-slide">
   <div class="kicker">Final project</div>
   <h1>Graph-Based Smart Contract Auditing</h1>
-  <div class="sub">A graph attention network prototype, evaluated by leave-one-contract-out</div>
+  <div class="sub">A graph attention network prototype, tested by leave-one-contract-out and on new contracts</div>
   <div class="meta">[Student Name] &middot; Student ID [Student ID] &middot; October 2026</div>
 </section>
 
@@ -63,7 +63,7 @@
   <h2>What this project asks</h2>
   <ul>
     <li><strong>RQ1.</strong> Can a GAT over a sliced contract graph separate vulnerable from safe contracts?</li>
-    <li><strong>RQ2.</strong> Does it generalize to a contract it has not seen, compared with simple baselines?</li>
+    <li><strong>RQ2.</strong> Does it generalize to contracts it has not seen, compared with simple baselines?</li>
     <li><strong>RQ3.</strong> Can its node scores point to the vulnerable line?</li>
   </ul>
   <div class="callout">We report a feasibility result, not a detection rate.</div>
@@ -74,7 +74,7 @@
   <div class="kicker">Pipeline</div>
   <h2>From source to verdict</h2>
   <div class="flow">
-    <div class="box">Solidity<br><small>pragma → solc 0.7.6 / 0.8.20</small></div>
+    <div class="box">Solidity<br><small>solc 0.7.6 / 0.8.20</small></div>
     <div class="arrow">→</div>
     <div class="box">AST + CFG + PDG<br><small>one multi-relational graph</small></div>
     <div class="arrow">→</div>
@@ -84,26 +84,28 @@
     <div class="arrow">→</div>
     <div class="box">Verdict + lines<br><small>graph and node heads</small></div>
   </div>
-  <p style="margin-top:26px">Sinks: external calls, <code>block.timestamp</code>, arithmetic operators. Thresholds: 0.5 contract, 0.3 node (set by hand).</p>
+  <p style="margin-top:26px">Sinks: external calls, <code>block.timestamp</code>, arithmetic (binary and compound <code>+=</code> <code>-=</code>). Thresholds: 0.5 contract, 0.3 node (set by hand).</p>
   <div class="num">4</div>
 </section>
 
 <section class="slide">
-  <div class="kicker">Data and protocol</div>
-  <h2>Six demo contracts, leave one out</h2>
+  <div class="kicker">Two protocols</div>
+  <h2>Held out, and new contracts</h2>
   <div class="cols">
     <div>
+      <p><strong>Leave-one-contract-out</strong></p>
       <ul>
-        <li>One vulnerable and one safe contract per class (hand-written, MIT).</li>
-        <li>Each held-out contract: retrain on the other five, then decide for all three classes.</li>
-        <li>18 decisions per method, of which <strong>3</strong> are positive.</li>
-        <li>GAT: 5 seeds. Baselines: sink-presence rule and logistic regression.</li>
+        <li>Six demo contracts; hold one out, train on five.</li>
+        <li>18 decisions per method, 3 positive.</li>
+        <li>GAT over 5 seeds; baselines: sink-presence rule, logistic regression.</li>
       </ul>
     </div>
     <div>
+      <p><strong>External test</strong></p>
       <ul>
-        <li><strong>Sink rule:</strong> flag a class if any sink for it exists. No training.</li>
-        <li><strong>Logistic regression:</strong> pooled node features, no message passing.</li>
+        <li>Train on all six; score six new contracts (different style; one solc 0.7.6).</li>
+        <li>18 decisions, 3 positive.</li>
+        <li>Caveat: one contract informed the arithmetic fix, so this is not independent.</li>
       </ul>
     </div>
   </div>
@@ -111,16 +113,29 @@
 </section>
 
 <section class="slide">
-  <div class="kicker">Results</div>
+  <div class="kicker">Results: held out</div>
   <h2>Leave-one-contract-out, 18 decisions</h2>
   <table>
     <tr><th>Method</th><th class="n">Precision</th><th class="n">Recall</th><th class="n">F1</th><th class="n">Accuracy</th></tr>
-    <tr><td>GAT (mean of 5 seeds)</td><td class="n">0.000</td><td class="n">0.000</td><td class="n">0.000</td><td class="n">0.767 ± 0.022</td></tr>
-    <tr><td>Sink-presence rule</td><td class="n">0.429</td><td class="n">1.000</td><td class="n">0.600</td><td class="n">0.778</td></tr>
+    <tr><td>GAT (5 seeds, identical)</td><td class="n">0.000</td><td class="n">0.000</td><td class="n">0.000</td><td class="n">0.778</td></tr>
+    <tr><td>Sink-presence rule</td><td class="n">0.333</td><td class="n">1.000</td><td class="n">0.500</td><td class="n">0.667</td></tr>
     <tr><td>Logistic regression</td><td class="n">0.000</td><td class="n">0.000</td><td class="n">0.000</td><td class="n">0.833</td></tr>
   </table>
   <div class="callout warn">The GAT flags none of the three held-out vulnerable contracts, in any seed.</div>
   <div class="num">6</div>
+</section>
+
+<section class="slide">
+  <div class="kicker">Results: new contracts</div>
+  <h2>External test, after the arithmetic fix</h2>
+  <table>
+    <tr><th>Method</th><th class="n">Precision</th><th class="n">Recall</th><th class="n">F1</th><th class="n">Accuracy</th><th class="n">Recall before fix</th></tr>
+    <tr><td>GAT</td><td class="n">1.000</td><td class="n">1.000</td><td class="n">1.000</td><td class="n">1.000</td><td class="n">0.667</td></tr>
+    <tr><td>Sink-presence rule</td><td class="n">0.300</td><td class="n">1.000</td><td class="n">0.462</td><td class="n">0.611</td><td class="n">0.667</td></tr>
+    <tr><td>Logistic regression</td><td class="n">0.000</td><td class="n">0.000</td><td class="n">0.000</td><td class="n">0.833</td><td class="n">0.000</td></tr>
+  </table>
+  <div class="callout warn">The fix was made after seeing LedgerVulnerable.sol, so this result is optimistic. It is not evidence of generalization.</div>
+  <div class="num">7</div>
 </section>
 
 <section class="slide">
@@ -129,33 +144,33 @@
   <div class="cols">
     <div>
       <div class="big">18 / 18</div>
-      <div class="bigl">correct decisions when trained and tested on the same six contracts (F1 1.000)</div>
+      <div class="bigl">correct when trained and tested on the same six contracts (F1 1.000)</div>
     </div>
     <div>
       <div class="big" style="color:var(--warn)">0 / 3</div>
       <div class="bigl">held-out vulnerable contracts detected under leave-one-contract-out (recall 0.000)</div>
     </div>
   </div>
-  <div class="callout">With one positive per class, holding out a contract removes the only example of its pattern.</div>
-  <div class="num">7</div>
+  <div class="callout">With one positive per class, holding out a contract removes the only example of its pattern. The fix also weakened separation on the demo set (Reentrancy 58%, safe Timestamp up to 29%).</div>
+  <div class="num">8</div>
 </section>
 
 <section class="slide">
   <div class="kicker">Figure</div>
-  <h2>Method comparison</h2>
+  <h2>Method comparison, held out</h2>
   <img src="../figures/fig_method_comparison.png" alt="Precision, recall and F1 for three methods">
-  <div class="num">8</div>
+  <div class="num">9</div>
 </section>
 
 <section class="slide">
   <div class="kicker">Error analysis</div>
   <h2>Why each error happens</h2>
   <ul>
-    <li><strong>GAT:</strong> errors repeat in every seed. Held-out Reentrancy: the only training example is the safe contract, which scores the pattern as safe. Held-out safe contract scored 0.96 for Reentrancy.</li>
-    <li><strong>Sink rule:</strong> <code>send</code> matches inside <code>msg.sender</code> and <code>"Failed to send"</code>, so two Arithmetic contracts are flagged for Reentrancy.</li>
-    <li><strong>Sink rule:</strong> flags any <code>*</code>, so it cannot separate checked and unchecked arithmetic.</li>
+    <li><strong>GAT:</strong> errors repeat in every seed. Held-out Reentrancy: the only training example is the safe contract, which scores the pattern as safe. A held-out safe contract scores 0.96 for Reentrancy.</li>
+    <li><strong>Sink rule, keywords:</strong> <code>send</code> matches inside <code>msg.sender</code> and <code>"Failed to send"</code>, so Arithmetic contracts are flagged for Reentrancy.</li>
+    <li><strong>Sink rule, after the fix:</strong> any <code>+=</code>, <code>-=</code> or <code>*</code> is an arithmetic sink, so six false positives.</li>
   </ul>
-  <div class="num">9</div>
+  <div class="num">10</div>
 </section>
 
 <section class="slide">
@@ -166,64 +181,66 @@
       <ul>
         <li>In-sample, Reentrancy is localized to lines 15 and 16 (external call and its check).</li>
         <li>In-sample, Timestamp is localized to line 9, after a label fix.</li>
-        <li>Arithmetic is flagged at 98.25% but not localized.</li>
+        <li>Arithmetic is flagged at 99.88% but not localized.</li>
         <li>Held out: localization fails in all 15 vulnerable-contract evaluations.</li>
+        <li>External: vault exact (14–15); raffle 13 plus one extra line; ledger not localized.</li>
       </ul>
     </div>
     <div>
       <img src="../figures/ReentrancyVulnerable_audit.png" alt="Audit graph" style="max-height:4.6in">
     </div>
   </div>
-  <div class="num">10</div>
+  <div class="num">11</div>
 </section>
 
 <section class="slide">
   <div class="kicker">Defects found and fixed</div>
   <h2>Found while checking the work</h2>
   <ul>
-    <li><strong>Wrong training labels</strong> for two contracts (lines 10 and 14 instead of 9 and 12).</li>
+    <li><strong>Wrong training labels</strong> for two contracts (lines 10 and 14, instead of 9 and 12).</li>
     <li><strong>Legacy-AST operator lookup</strong> failed for solc 0.7.6, so the arithmetic contract had no sink.</li>
-    <li><strong>Unreproducible numbers</strong> in the earlier draft removed; training is seeded and logged.</li>
+    <li><strong>Compound assignments ignored</strong> by the arithmetic check. Found on the new contract; fixed; it weakened demo-set separation.</li>
     <li><strong>Unverifiable references</strong> removed; the rest checked against publisher or arXiv pages.</li>
   </ul>
-  <div class="callout">Pre-fix logs are kept in <code>results/logs/before_fixes/</code>. Full list: <code>FAILURE_LOG.md</code>.</div>
-  <div class="num">11</div>
+  <div class="callout">Pre-fix logs are kept in <code>results/logs/before_fixes/</code> and <code>results/logs/before_arithmetic_fix/</code>. Full list: <code>FAILURE_LOG.md</code>.</div>
+  <div class="num">12</div>
 </section>
 
 <section class="slide">
   <div class="kicker">Limitations</div>
   <h2>What this does not show</h2>
   <ul>
-    <li>Six contracts: precision and recall are not estimates of real performance.</li>
+    <li>Six training and six external contracts, all written by the author: not real code.</li>
+    <li>The external test informed a fix, so it is optimistic.</li>
     <li>Keyword features match substrings (<code>now</code>, <code>send</code>).</li>
     <li>Thresholds set by hand; compiler versions 0.4–0.6 untested.</li>
     <li>Public benchmarks (SmartBugs, SolidiFI) not yet used.</li>
   </ul>
-  <div class="num">12</div>
+  <div class="num">13</div>
 </section>
 
 <section class="slide">
   <div class="kicker">Next steps</div>
   <h2>What would make a detection claim possible</h2>
   <ol style="font-size:17pt; line-height:1.6; padding-left: 26px">
+    <li>A fresh test set, written or chosen before any further change, and not used for design.</li>
     <li>Evaluate on SolidiFI and SmartBugs with a held-out split.</li>
     <li>Report precision, recall and F1 with confidence intervals.</li>
     <li>Compare with Oyente, SmartCheck and Slither on the same contracts.</li>
-    <li>Run an ablation for the keyword features.</li>
   </ol>
-  <div class="num">13</div>
+  <div class="num">14</div>
 </section>
 
 <section class="slide">
   <div class="kicker">Evidence</div>
   <h2>Everything is in the repository</h2>
   <ul>
-    <li>Code, saved weights, three executed notebooks, all metrics and logs.</li>
-    <li><code>results/metrics.json</code> holds every number in the manuscript and slides.</li>
+    <li>Code, saved weights, four executed notebooks, all metrics and logs.</li>
+    <li><code>results/metrics.json</code> and <code>results/external_test/metrics.json</code> hold the numbers in the manuscript and slides.</li>
     <li>Data card, model card, ethics, AI-use disclosure, failure log, reproducibility checklist.</li>
-    <li>Reproduce: <code>python evaluate.py</code> (see <code>README.md</code>).</li>
+    <li>Reproduce: <code>python evaluate.py</code> and <code>python evaluate_external.py</code> (see <code>README.md</code>).</li>
   </ul>
-  <div class="num">14</div>
+  <div class="num">15</div>
 </section>
 
 </body>
