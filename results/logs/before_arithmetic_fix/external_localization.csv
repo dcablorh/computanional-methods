@@ -1,0 +1,16 @@
+seed,contract,gold_lines,predicted_lines,precision,recall
+0,VaultVulnerable.sol,14 15,14 15,1.0,1.0
+0,RaffleVulnerable.sol,13,13 14,0.5,1.0
+0,LedgerVulnerable.sol,12,,0.0,0.0
+1,VaultVulnerable.sol,14 15,14 15,1.0,1.0
+1,RaffleVulnerable.sol,13,13 14,0.5,1.0
+1,LedgerVulnerable.sol,12,8 12 13,0.3333333333333333,1.0
+2,VaultVulnerable.sol,14 15,14 15,1.0,1.0
+2,RaffleVulnerable.sol,13,13 14,0.5,1.0
+2,LedgerVulnerable.sol,12,,0.0,0.0
+3,VaultVulnerable.sol,14 15,14 15,1.0,1.0
+3,RaffleVulnerable.sol,13,13 14,0.5,1.0
+3,LedgerVulnerable.sol,12,8 12 13,0.3333333333333333,1.0
+4,VaultVulnerable.sol,14 15,14 15,1.0,1.0
+4,RaffleVulnerable.sol,13,13 14,0.5,1.0
+4,LedgerVulnerable.sol,12,,0.0,0.0

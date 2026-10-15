@@ -1,91 +1,91 @@
 seed,contract,class,truth,prob,pred
-0,ReentrancyVulnerable.sol,Reentrancy,1,3.294955604360439e-06,0
-0,ReentrancyVulnerable.sol,Timestamp Dependency,0,0.00013942878285888582,0
-0,ReentrancyVulnerable.sol,Arithmetic Error,0,0.0028717550449073315,0
-0,ReentrancySafe.sol,Reentrancy,0,0.9590910077095032,1
-0,ReentrancySafe.sol,Timestamp Dependency,0,2.436402974126395e-05,0
-0,ReentrancySafe.sol,Arithmetic Error,0,7.129558071028441e-05,0
-0,TimestampVulnerable.sol,Reentrancy,0,5.641152893076651e-05,0
-0,TimestampVulnerable.sol,Timestamp Dependency,1,2.437088369333651e-05,0
-0,TimestampVulnerable.sol,Arithmetic Error,0,0.06675752252340317,0
-0,TimestampSafe.sol,Reentrancy,0,9.19031720059138e-07,0
-0,TimestampSafe.sol,Timestamp Dependency,0,0.0005683011841028929,0
-0,TimestampSafe.sol,Arithmetic Error,0,0.022688668221235275,0
-0,ArithmeticVulnerable.sol,Reentrancy,0,0.0016911542043089867,0
-0,ArithmeticVulnerable.sol,Timestamp Dependency,0,0.000357014883775264,0
-0,ArithmeticVulnerable.sol,Arithmetic Error,1,3.0463044822681695e-05,0
-0,ArithmeticSafe.sol,Reentrancy,0,0.06468112021684647,0
-0,ArithmeticSafe.sol,Timestamp Dependency,0,0.00015881283616181463,0
-0,ArithmeticSafe.sol,Arithmetic Error,0,0.0679972842335701,0
-1,ReentrancyVulnerable.sol,Reentrancy,1,3.578860741981771e-06,0
-1,ReentrancyVulnerable.sol,Timestamp Dependency,0,0.0001905308454297483,0
-1,ReentrancyVulnerable.sol,Arithmetic Error,0,0.0007320978329516947,0
-1,ReentrancySafe.sol,Reentrancy,0,0.9836896061897278,1
-1,ReentrancySafe.sol,Timestamp Dependency,0,1.6370553566957824e-05,0
-1,ReentrancySafe.sol,Arithmetic Error,0,3.508429290377535e-05,0
-1,TimestampVulnerable.sol,Reentrancy,0,1.4428554095502477e-05,0
-1,TimestampVulnerable.sol,Timestamp Dependency,1,4.042240107082762e-05,0
-1,TimestampVulnerable.sol,Arithmetic Error,0,0.5763067603111267,1
-1,TimestampSafe.sol,Reentrancy,0,8.369397619389929e-08,0
-1,TimestampSafe.sol,Timestamp Dependency,0,0.0011214526602998376,0
-1,TimestampSafe.sol,Arithmetic Error,0,0.02619325928390026,0
-1,ArithmeticVulnerable.sol,Reentrancy,0,0.00745213869959116,0
-1,ArithmeticVulnerable.sol,Timestamp Dependency,0,0.00037839720607735217,0
-1,ArithmeticVulnerable.sol,Arithmetic Error,1,0.00011181716399732977,0
-1,ArithmeticSafe.sol,Reentrancy,0,0.09534083306789398,0
-1,ArithmeticSafe.sol,Timestamp Dependency,0,4.089914364158176e-05,0
-1,ArithmeticSafe.sol,Arithmetic Error,0,0.023626504465937614,0
-2,ReentrancyVulnerable.sol,Reentrancy,1,5.253035396890482e-06,0
-2,ReentrancyVulnerable.sol,Timestamp Dependency,0,0.00022524985251948237,0
-2,ReentrancyVulnerable.sol,Arithmetic Error,0,0.0007295978721231222,0
-2,ReentrancySafe.sol,Reentrancy,0,0.9613243937492371,1
-2,ReentrancySafe.sol,Timestamp Dependency,0,5.014267298975028e-05,0
-2,ReentrancySafe.sol,Arithmetic Error,0,6.632652366533875e-05,0
-2,TimestampVulnerable.sol,Reentrancy,0,0.000283331231912598,0
-2,TimestampVulnerable.sol,Timestamp Dependency,1,2.695045441214461e-05,0
-2,TimestampVulnerable.sol,Arithmetic Error,0,0.01197268906980753,0
-2,TimestampSafe.sol,Reentrancy,0,2.7863206923939288e-06,0
-2,TimestampSafe.sol,Timestamp Dependency,0,0.00035309020313434303,0
-2,TimestampSafe.sol,Arithmetic Error,0,0.14025823771953583,0
-2,ArithmeticVulnerable.sol,Reentrancy,0,0.00017927344015333802,0
-2,ArithmeticVulnerable.sol,Timestamp Dependency,0,0.0005946944584138691,0
-2,ArithmeticVulnerable.sol,Arithmetic Error,1,1.583911944180727e-05,0
-2,ArithmeticSafe.sol,Reentrancy,0,0.11333067715167999,0
-2,ArithmeticSafe.sol,Timestamp Dependency,0,0.00019564299145713449,0
-2,ArithmeticSafe.sol,Arithmetic Error,0,0.019516117870807648,0
-3,ReentrancyVulnerable.sol,Reentrancy,1,2.1390897018136457e-06,0
-3,ReentrancyVulnerable.sol,Timestamp Dependency,0,0.00010061177454190329,0
-3,ReentrancyVulnerable.sol,Arithmetic Error,0,0.004345409572124481,0
-3,ReentrancySafe.sol,Reentrancy,0,0.9836376905441284,1
-3,ReentrancySafe.sol,Timestamp Dependency,0,2.753049375314731e-05,0
-3,ReentrancySafe.sol,Arithmetic Error,0,8.918964158510789e-05,0
-3,TimestampVulnerable.sol,Reentrancy,0,0.00028754957020282745,0
-3,TimestampVulnerable.sol,Timestamp Dependency,1,5.462796980282292e-05,0
-3,TimestampVulnerable.sol,Arithmetic Error,0,0.008460418321192265,0
-3,TimestampSafe.sol,Reentrancy,0,5.446481736726128e-07,0
-3,TimestampSafe.sol,Timestamp Dependency,0,0.0010274270316585898,0
-3,TimestampSafe.sol,Arithmetic Error,0,0.0003514278505463153,0
-3,ArithmeticVulnerable.sol,Reentrancy,0,0.00020120838598813862,0
-3,ArithmeticVulnerable.sol,Timestamp Dependency,0,0.0007605042774230242,0
-3,ArithmeticVulnerable.sol,Arithmetic Error,1,4.5611806854140013e-05,0
-3,ArithmeticSafe.sol,Reentrancy,0,0.02009725011885166,0
-3,ArithmeticSafe.sol,Timestamp Dependency,0,0.0003094881249126047,0
-3,ArithmeticSafe.sol,Arithmetic Error,0,0.044486481696367264,0
-4,ReentrancyVulnerable.sol,Reentrancy,1,1.411149696650682e-05,0
-4,ReentrancyVulnerable.sol,Timestamp Dependency,0,0.0002570351061876863,0
-4,ReentrancyVulnerable.sol,Arithmetic Error,0,0.0030893394723534584,0
-4,ReentrancySafe.sol,Reentrancy,0,0.984585702419281,1
-4,ReentrancySafe.sol,Timestamp Dependency,0,7.96082713350188e-06,0
-4,ReentrancySafe.sol,Arithmetic Error,0,9.817604586714879e-05,0
-4,TimestampVulnerable.sol,Reentrancy,0,6.723584374412894e-05,0
-4,TimestampVulnerable.sol,Timestamp Dependency,1,4.254112718626857e-05,0
-4,TimestampVulnerable.sol,Arithmetic Error,0,0.1415606290102005,0
-4,TimestampSafe.sol,Reentrancy,0,3.537699376465753e-05,0
-4,TimestampSafe.sol,Timestamp Dependency,0,0.00020248997316230088,0
-4,TimestampSafe.sol,Arithmetic Error,0,0.021141326054930687,0
-4,ArithmeticVulnerable.sol,Reentrancy,0,0.024471217766404152,0
-4,ArithmeticVulnerable.sol,Timestamp Dependency,0,0.00045442613190971315,0
-4,ArithmeticVulnerable.sol,Arithmetic Error,1,0.00020623774616979063,0
-4,ArithmeticSafe.sol,Reentrancy,0,0.04533180594444275,0
-4,ArithmeticSafe.sol,Timestamp Dependency,0,0.00014675137936137617,0
-4,ArithmeticSafe.sol,Arithmetic Error,0,0.014398662373423576,0
+0,ReentrancyVulnerable.sol,Reentrancy,1,4.4019147935614455e-06,0
+0,ReentrancyVulnerable.sol,Timestamp Dependency,0,0.00019025997607968748,0
+0,ReentrancyVulnerable.sol,Arithmetic Error,0,0.0007870188564993441,0
+0,ReentrancySafe.sol,Reentrancy,0,0.9598081707954407,1
+0,ReentrancySafe.sol,Timestamp Dependency,0,2.2781545339967124e-05,0
+0,ReentrancySafe.sol,Arithmetic Error,0,0.0001151726464740932,0
+0,TimestampVulnerable.sol,Reentrancy,0,0.0001965893607120961,0
+0,TimestampVulnerable.sol,Timestamp Dependency,1,2.5049486794159748e-05,0
+0,TimestampVulnerable.sol,Arithmetic Error,0,0.006196991540491581,0
+0,TimestampSafe.sol,Reentrancy,0,0.06015517935156822,0
+0,TimestampSafe.sol,Timestamp Dependency,0,0.0006676131160929799,0
+0,TimestampSafe.sol,Arithmetic Error,0,0.000541465065907687,0
+0,ArithmeticVulnerable.sol,Reentrancy,0,0.00035901955561712384,0
+0,ArithmeticVulnerable.sol,Timestamp Dependency,0,0.002184381941333413,0
+0,ArithmeticVulnerable.sol,Arithmetic Error,1,4.536155756795779e-05,0
+0,ArithmeticSafe.sol,Reentrancy,0,0.0035301735624670982,0
+0,ArithmeticSafe.sol,Timestamp Dependency,0,0.00020075382781215012,0
+0,ArithmeticSafe.sol,Arithmetic Error,0,0.00016617579967714846,0
+1,ReentrancyVulnerable.sol,Reentrancy,1,8.021199391805567e-06,0
+1,ReentrancyVulnerable.sol,Timestamp Dependency,0,0.00015094388800207525,0
+1,ReentrancyVulnerable.sol,Arithmetic Error,0,0.0010216457303613424,0
+1,ReentrancySafe.sol,Reentrancy,0,0.9785559177398682,1
+1,ReentrancySafe.sol,Timestamp Dependency,0,1.6335059626726434e-05,0
+1,ReentrancySafe.sol,Arithmetic Error,0,5.272643466014415e-05,0
+1,TimestampVulnerable.sol,Reentrancy,0,0.00031151322764344513,0
+1,TimestampVulnerable.sol,Timestamp Dependency,1,3.210018257959746e-05,0
+1,TimestampVulnerable.sol,Arithmetic Error,0,0.021469468250870705,0
+1,TimestampSafe.sol,Reentrancy,0,0.0024707538541406393,0
+1,TimestampSafe.sol,Timestamp Dependency,0,0.0008711419068276882,0
+1,TimestampSafe.sol,Arithmetic Error,0,0.005709968972951174,0
+1,ArithmeticVulnerable.sol,Reentrancy,0,0.17913638055324554,0
+1,ArithmeticVulnerable.sol,Timestamp Dependency,0,0.0018358513480052352,0
+1,ArithmeticVulnerable.sol,Arithmetic Error,1,0.0011527257738634944,0
+1,ArithmeticSafe.sol,Reentrancy,0,0.0020324953366070986,0
+1,ArithmeticSafe.sol,Timestamp Dependency,0,0.00013317583943717182,0
+1,ArithmeticSafe.sol,Arithmetic Error,0,0.0010704115265980363,0
+2,ReentrancyVulnerable.sol,Reentrancy,1,6.925311936356593e-06,0
+2,ReentrancyVulnerable.sol,Timestamp Dependency,0,0.00021536441636271775,0
+2,ReentrancyVulnerable.sol,Arithmetic Error,0,0.0009765350259840488,0
+2,ReentrancySafe.sol,Reentrancy,0,0.9641473293304443,1
+2,ReentrancySafe.sol,Timestamp Dependency,0,4.229469777783379e-05,0
+2,ReentrancySafe.sol,Arithmetic Error,0,0.0001563838595757261,0
+2,TimestampVulnerable.sol,Reentrancy,0,0.0016874574357643723,0
+2,TimestampVulnerable.sol,Timestamp Dependency,1,2.490088991180528e-05,0
+2,TimestampVulnerable.sol,Arithmetic Error,0,0.0010740647558122873,0
+2,TimestampSafe.sol,Reentrancy,0,0.003962829243391752,0
+2,TimestampSafe.sol,Timestamp Dependency,0,0.0004036854952573776,0
+2,TimestampSafe.sol,Arithmetic Error,0,0.0021413767244666815,0
+2,ArithmeticVulnerable.sol,Reentrancy,0,0.00017033125914167613,0
+2,ArithmeticVulnerable.sol,Timestamp Dependency,0,0.005176409147679806,0
+2,ArithmeticVulnerable.sol,Arithmetic Error,1,5.5115073337219656e-05,0
+2,ArithmeticSafe.sol,Reentrancy,0,0.0026076524518430233,0
+2,ArithmeticSafe.sol,Timestamp Dependency,0,0.0003609107225202024,0
+2,ArithmeticSafe.sol,Arithmetic Error,0,0.00033409346360713243,0
+3,ReentrancyVulnerable.sol,Reentrancy,1,1.4151491996017285e-06,0
+3,ReentrancyVulnerable.sol,Timestamp Dependency,0,0.00018903956515714526,0
+3,ReentrancyVulnerable.sol,Arithmetic Error,0,0.0005866186111234128,0
+3,ReentrancySafe.sol,Reentrancy,0,0.9626506567001343,1
+3,ReentrancySafe.sol,Timestamp Dependency,0,2.793496969388798e-05,0
+3,ReentrancySafe.sol,Arithmetic Error,0,0.0003390888450667262,0
+3,TimestampVulnerable.sol,Reentrancy,0,0.00034885809873230755,0
+3,TimestampVulnerable.sol,Timestamp Dependency,1,0.0001040468123392202,0
+3,TimestampVulnerable.sol,Arithmetic Error,0,0.010711236856877804,0
+3,TimestampSafe.sol,Reentrancy,0,0.0029875277541577816,0
+3,TimestampSafe.sol,Timestamp Dependency,0,0.0008818111382424831,0
+3,TimestampSafe.sol,Arithmetic Error,0,0.004033110104501247,0
+3,ArithmeticVulnerable.sol,Reentrancy,0,0.009645747020840645,0
+3,ArithmeticVulnerable.sol,Timestamp Dependency,0,0.004942936357110739,0
+3,ArithmeticVulnerable.sol,Arithmetic Error,1,0.0003945201460737735,0
+3,ArithmeticSafe.sol,Reentrancy,0,0.00042852858314290643,0
+3,ArithmeticSafe.sol,Timestamp Dependency,0,0.00040612262091599405,0
+3,ArithmeticSafe.sol,Arithmetic Error,0,0.0008348078117705882,0
+4,ReentrancyVulnerable.sol,Reentrancy,1,1.297079688811209e-05,0
+4,ReentrancyVulnerable.sol,Timestamp Dependency,0,0.00016509252600371838,0
+4,ReentrancyVulnerable.sol,Arithmetic Error,0,0.0008161752484738827,0
+4,ReentrancySafe.sol,Reentrancy,0,0.9789459109306335,1
+4,ReentrancySafe.sol,Timestamp Dependency,0,5.930610768700717e-06,0
+4,ReentrancySafe.sol,Arithmetic Error,0,0.00020927819423377514,0
+4,TimestampVulnerable.sol,Reentrancy,0,0.0023593103978782892,0
+4,TimestampVulnerable.sol,Timestamp Dependency,1,5.157311534276232e-05,0
+4,TimestampVulnerable.sol,Arithmetic Error,0,0.003989404998719692,0
+4,TimestampSafe.sol,Reentrancy,0,0.0004129986627958715,0
+4,TimestampSafe.sol,Timestamp Dependency,0,0.001174694625660777,0
+4,TimestampSafe.sol,Arithmetic Error,0,0.006487028207629919,0
+4,ArithmeticVulnerable.sol,Reentrancy,0,0.0356735959649086,0
+4,ArithmeticVulnerable.sol,Timestamp Dependency,0,0.0021486945915967226,0
+4,ArithmeticVulnerable.sol,Arithmetic Error,1,0.0004044308152515441,0
+4,ArithmeticSafe.sol,Reentrancy,0,0.011215862818062305,0
+4,ArithmeticSafe.sol,Timestamp Dependency,0,0.00016843064804561436,0
+4,ArithmeticSafe.sol,Arithmetic Error,0,0.00034425436751917005,0

@@ -12,9 +12,9 @@
                  AUDIT SCAN REPORT                 
 ==================================================
 [Reentrancy] Confidence: 0.00%
-[Timestamp Dependency] Confidence: 99.99%
+[Timestamp Dependency] Confidence: 99.92%
   >>> ALERT: Potential Timestamp Dependency vulnerability detected!
   >>> Vulnerable Code Localization (GNN Node Saliency):
       [Line 009]: "Not the lucky second"
 --------------------------------------------------
-[Arithmetic Error] Confidence: 0.00%
+[Arithmetic Error] Confidence: 0.01%

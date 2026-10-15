@@ -1,0 +1,133 @@
+{
+  "setup": {
+    "contracts": [
+      "ReentrancyVulnerable.sol",
+      "ReentrancySafe.sol",
+      "TimestampVulnerable.sol",
+      "TimestampSafe.sol",
+      "ArithmeticVulnerable.sol",
+      "ArithmeticSafe.sol"
+    ],
+    "decisions_per_method": 18,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "epochs": 100,
+    "learning_rate": 0.005,
+    "graph_threshold": 0.5,
+    "node_threshold": 0.3
+  },
+  "gat_loco_mean": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "accuracy": 0.7666666666666666
+  },
+  "gat_loco_std": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "accuracy": 0.022222222222222233
+  },
+  "gat_loco_per_seed": {
+    "0": {
+      "TP": 0,
+      "FP": 1,
+      "TN": 14,
+      "FN": 3,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "accuracy": 0.7777777777777778
+    },
+    "1": {
+      "TP": 0,
+      "FP": 2,
+      "TN": 13,
+      "FN": 3,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "accuracy": 0.7222222222222222
+    },
+    "2": {
+      "TP": 0,
+      "FP": 1,
+      "TN": 14,
+      "FN": 3,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "accuracy": 0.7777777777777778
+    },
+    "3": {
+      "TP": 0,
+      "FP": 1,
+      "TN": 14,
+      "FN": 3,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "accuracy": 0.7777777777777778
+    },
+    "4": {
+      "TP": 0,
+      "FP": 1,
+      "TN": 14,
+      "FN": 3,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "accuracy": 0.7777777777777778
+    }
+  },
+  "sink_rule": {
+    "TP": 3,
+    "FP": 4,
+    "TN": 11,
+    "FN": 0,
+    "precision": 0.42857142857142855,
+    "recall": 1.0,
+    "f1": 0.6,
+    "accuracy": 0.7777777777777778
+  },
+  "logistic_loco": {
+    "TP": 0,
+    "FP": 0,
+    "TN": 15,
+    "FN": 3,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "accuracy": 0.8333333333333334
+  },
+  "gat_in_sample_saved_weights": {
+    "TP": 3,
+    "FP": 0,
+    "TN": 15,
+    "FN": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "accuracy": 1.0
+  },
+  "gat_localization_loco": {
+    "mean_precision": 0.0,
+    "mean_recall": 0.0,
+    "rows": 15
+  },
+  "gat_seed0_counts": {
+    "TP": 0,
+    "FP": 1,
+    "TN": 14,
+    "FN": 3,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "accuracy": 0.7777777777777778
+  }
+}

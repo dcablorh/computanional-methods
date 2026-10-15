@@ -1,10 +1,10 @@
 contract,class,truth,pred
 ReentrancyVulnerable.sol,Reentrancy,1,1
 ReentrancyVulnerable.sol,Timestamp Dependency,0,0
-ReentrancyVulnerable.sol,Arithmetic Error,0,0
+ReentrancyVulnerable.sol,Arithmetic Error,0,1
 ReentrancySafe.sol,Reentrancy,0,1
 ReentrancySafe.sol,Timestamp Dependency,0,0
-ReentrancySafe.sol,Arithmetic Error,0,0
+ReentrancySafe.sol,Arithmetic Error,0,1
 TimestampVulnerable.sol,Reentrancy,0,0
 TimestampVulnerable.sol,Timestamp Dependency,1,1
 TimestampVulnerable.sol,Arithmetic Error,0,0

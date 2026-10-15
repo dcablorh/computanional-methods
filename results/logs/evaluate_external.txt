@@ -1,0 +1,52 @@
+[*] Processing contracts to build GNN dataset...
+[*] Detected pragma version requirement. Using solc 0.8.20
+[*] Compiling ./demo_contracts\ReentrancyVulnerable.sol...
+[+] Loaded ReentrancyVulnerable.sol (Nodes: 30, Edges: 54)
+[*] Detected pragma version requirement. Using solc 0.8.20
+[*] Compiling ./demo_contracts\ReentrancySafe.sol...
+[+] Loaded ReentrancySafe.sol (Nodes: 32, Edges: 58)
+[*] Detected pragma version requirement. Using solc 0.8.20
+[*] Compiling ./demo_contracts\TimestampVulnerable.sol...
+[+] Loaded TimestampVulnerable.sol (Nodes: 13, Edges: 22)
+[*] Detected pragma version requirement. Using solc 0.8.20
+[*] Compiling ./demo_contracts\TimestampSafe.sol...
+[+] Loaded TimestampSafe.sol (Nodes: 19, Edges: 32)
+[*] Detected pragma version requirement. Using solc 0.7.6
+[*] Compiling ./demo_contracts\ArithmeticVulnerable.sol...
+[+] Loaded ArithmeticVulnerable.sol (Nodes: 18, Edges: 18)
+[*] Detected pragma version requirement. Using solc 0.8.20
+[*] Compiling ./demo_contracts\ArithmeticSafe.sol...
+[+] Loaded ArithmeticSafe.sol (Nodes: 43, Edges: 77)
+[*] Detected pragma version requirement. Using solc 0.8.20
+[*] Compiling ./test_contracts\VaultVulnerable.sol...
+[*] Detected pragma version requirement. Using solc 0.8.20
+[*] Compiling ./test_contracts\VaultSafe.sol...
+[*] Detected pragma version requirement. Using solc 0.8.20
+[*] Compiling ./test_contracts\RaffleVulnerable.sol...
+[*] Detected pragma version requirement. Using solc 0.8.20
+[*] Compiling ./test_contracts\RaffleSafe.sol...
+[*] Detected pragma version requirement. Using solc 0.7.6
+[*] Compiling ./test_contracts\LedgerVulnerable.sol...
+[*] Detected pragma version requirement. Using solc 0.8.20
+[*] Compiling ./test_contracts\LedgerSafe.sol...
+Test contracts: slicing and line check
+  VaultVulnerable.sol      sliced nodes= 33 truth=[1.0, 0.0, 0.0] gold_lines=[14, 15]
+  VaultSafe.sol            sliced nodes= 35 truth=[0.0, 0.0, 0.0] gold_lines=[]
+  RaffleVulnerable.sol     sliced nodes= 22 truth=[0.0, 1.0, 0.0] gold_lines=[13]
+  RaffleSafe.sol           sliced nodes= 18 truth=[0.0, 0.0, 0.0] gold_lines=[]
+  LedgerVulnerable.sol     sliced nodes= 10 truth=[0.0, 0.0, 1.0] gold_lines=[12]
+  LedgerSafe.sol           sliced nodes= 34 truth=[0.0, 0.0, 0.0] gold_lines=[]
+
+External test: 18 decisions, 3 positive
+  GAT (mean of 5 seeds)   P=1.000 R=1.000 F1=1.000 Acc=1.000
+  Sink-presence rule      P=0.300 R=1.000 F1=0.462 Acc=0.611
+  Logistic regression     P=0.000 R=0.000 F1=0.000 Acc=0.833
+  GAT localization: mean precision=0.489, mean recall=0.667, n=15
+
+GAT mean probability per decision:
+  VaultVulnerable.sol      ['0.974', '0.000', '0.000']
+  VaultSafe.sol            ['0.013', '0.000', '0.000']
+  RaffleVulnerable.sol     ['0.000', '0.931', '0.000']
+  RaffleSafe.sol           ['0.018', '0.004', '0.000']
+  LedgerVulnerable.sol     ['0.000', '0.002', '0.999']
+  LedgerSafe.sol           ['0.000', '0.000', '0.000']

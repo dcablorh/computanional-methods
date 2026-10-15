@@ -1,10 +1,10 @@
 [*] Processing contracts to build GNN dataset...
 [*] Detected pragma version requirement. Using solc 0.8.20
 [*] Compiling ./demo_contracts\ReentrancyVulnerable.sol...
-[+] Loaded ReentrancyVulnerable.sol (Nodes: 23, Edges: 43)
+[+] Loaded ReentrancyVulnerable.sol (Nodes: 30, Edges: 54)
 [*] Detected pragma version requirement. Using solc 0.8.20
 [*] Compiling ./demo_contracts\ReentrancySafe.sol...
-[+] Loaded ReentrancySafe.sol (Nodes: 25, Edges: 47)
+[+] Loaded ReentrancySafe.sol (Nodes: 32, Edges: 58)
 [*] Detected pragma version requirement. Using solc 0.8.20
 [*] Compiling ./demo_contracts\TimestampVulnerable.sol...
 [+] Loaded TimestampVulnerable.sol (Nodes: 13, Edges: 22)
@@ -13,10 +13,10 @@
 [+] Loaded TimestampSafe.sol (Nodes: 19, Edges: 32)
 [*] Detected pragma version requirement. Using solc 0.7.6
 [*] Compiling ./demo_contracts\ArithmeticVulnerable.sol...
-[+] Loaded ArithmeticVulnerable.sol (Nodes: 8, Edges: 9)
+[+] Loaded ArithmeticVulnerable.sol (Nodes: 18, Edges: 18)
 [*] Detected pragma version requirement. Using solc 0.8.20
 [*] Compiling ./demo_contracts\ArithmeticSafe.sol...
-[+] Loaded ArithmeticSafe.sol (Nodes: 20, Edges: 36)
+[+] Loaded ArithmeticSafe.sol (Nodes: 43, Edges: 77)
 [*] LOCO GAT, seed 0
 [*] LOCO GAT, seed 1
 [*] LOCO GAT, seed 2
@@ -24,9 +24,9 @@
 [*] LOCO GAT, seed 4
 
 LOCO summary (18 class decisions per method)
-  GAT (LOCO, mean of 5 seeds)              P=0.000 R=0.000 F1=0.000 Acc=0.767
-  Sink-presence rule (no learning)         P=0.429 R=1.000 F1=0.600 Acc=0.778
+  GAT (LOCO, mean of 5 seeds)              P=0.000 R=0.000 F1=0.000 Acc=0.778
+  Sink-presence rule (no learning)         P=0.333 R=1.000 F1=0.500 Acc=0.667
   Logistic regression, pooled features     P=0.000 R=0.000 F1=0.000 Acc=0.833
-  GAT std across seeds: precision=0.000, recall=0.000, f1=0.000, accuracy=0.022
+  GAT std across seeds: precision=0.000, recall=0.000, f1=0.000, accuracy=0.000
   GAT in-sample (saved weights): P=1.000 R=1.000 F1=1.000 Acc=1.000
   GAT localization (LOCO, vulnerable contracts): mean precision=0.000, mean recall=0.000, n=15

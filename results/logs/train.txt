@@ -1,10 +1,10 @@
 [*] Processing contracts to build GNN dataset...
 [*] Detected pragma version requirement. Using solc 0.8.20
 [*] Compiling ./demo_contracts\ReentrancyVulnerable.sol...
-[+] Loaded ReentrancyVulnerable.sol (Nodes: 23, Edges: 43)
+[+] Loaded ReentrancyVulnerable.sol (Nodes: 30, Edges: 54)
 [*] Detected pragma version requirement. Using solc 0.8.20
 [*] Compiling ./demo_contracts\ReentrancySafe.sol...
-[+] Loaded ReentrancySafe.sol (Nodes: 25, Edges: 47)
+[+] Loaded ReentrancySafe.sol (Nodes: 32, Edges: 58)
 [*] Detected pragma version requirement. Using solc 0.8.20
 [*] Compiling ./demo_contracts\TimestampVulnerable.sol...
 [+] Loaded TimestampVulnerable.sol (Nodes: 13, Edges: 22)
@@ -13,24 +13,24 @@
 [+] Loaded TimestampSafe.sol (Nodes: 19, Edges: 32)
 [*] Detected pragma version requirement. Using solc 0.7.6
 [*] Compiling ./demo_contracts\ArithmeticVulnerable.sol...
-[+] Loaded ArithmeticVulnerable.sol (Nodes: 8, Edges: 9)
+[+] Loaded ArithmeticVulnerable.sol (Nodes: 18, Edges: 18)
 [*] Detected pragma version requirement. Using solc 0.8.20
 [*] Compiling ./demo_contracts\ArithmeticSafe.sol...
-[+] Loaded ArithmeticSafe.sol (Nodes: 20, Edges: 36)
+[+] Loaded ArithmeticSafe.sol (Nodes: 43, Edges: 77)
 
 [*] Starting GNN model training...
 [*] Training on 6 graphs for 100 epochs (seed=42)...
-Epoch 001/100 | Total Loss: 1.8565 (Graph Loss: 0.6644, Node Loss: 0.5961)
-Epoch 010/100 | Total Loss: 0.7989 (Graph Loss: 0.2801, Node Loss: 0.2594)
-Epoch 020/100 | Total Loss: 0.6065 (Graph Loss: 0.1639, Node Loss: 0.2213)
-Epoch 030/100 | Total Loss: 0.3854 (Graph Loss: 0.0371, Node Loss: 0.1742)
-Epoch 040/100 | Total Loss: 0.3362 (Graph Loss: 0.0120, Node Loss: 0.1621)
-Epoch 050/100 | Total Loss: 0.3433 (Graph Loss: 0.0120, Node Loss: 0.1657)
-Epoch 060/100 | Total Loss: 0.3212 (Graph Loss: 0.0099, Node Loss: 0.1557)
-Epoch 070/100 | Total Loss: 0.2894 (Graph Loss: 0.0051, Node Loss: 0.1421)
-Epoch 080/100 | Total Loss: 0.3329 (Graph Loss: 0.0093, Node Loss: 0.1618)
-Epoch 090/100 | Total Loss: 0.3304 (Graph Loss: 0.0340, Node Loss: 0.1482)
-Epoch 100/100 | Total Loss: 0.2870 (Graph Loss: 0.0006, Node Loss: 0.1432)
+Epoch 001/100 | Total Loss: 1.8217 (Graph Loss: 0.6609, Node Loss: 0.5804)
+Epoch 010/100 | Total Loss: 0.7673 (Graph Loss: 0.2706, Node Loss: 0.2483)
+Epoch 020/100 | Total Loss: 0.4653 (Graph Loss: 0.1176, Node Loss: 0.1739)
+Epoch 030/100 | Total Loss: 0.4032 (Graph Loss: 0.0654, Node Loss: 0.1689)
+Epoch 040/100 | Total Loss: 0.4298 (Graph Loss: 0.1169, Node Loss: 0.1565)
+Epoch 050/100 | Total Loss: 0.3361 (Graph Loss: 0.0253, Node Loss: 0.1554)
+Epoch 060/100 | Total Loss: 0.3062 (Graph Loss: 0.0166, Node Loss: 0.1448)
+Epoch 070/100 | Total Loss: 0.2485 (Graph Loss: 0.0099, Node Loss: 0.1193)
+Epoch 080/100 | Total Loss: 0.2665 (Graph Loss: 0.0138, Node Loss: 0.1264)
+Epoch 090/100 | Total Loss: 0.2411 (Graph Loss: 0.0165, Node Loss: 0.1123)
+Epoch 100/100 | Total Loss: 0.2216 (Graph Loss: 0.0025, Node Loss: 0.1095)
 
 [+] Training complete!
 [+] Saved trained model weights to ./model.pth
@@ -38,31 +38,31 @@ Epoch 100/100 | Total Loss: 0.2870 (Graph Loss: 0.0006, Node Loss: 0.1432)
 [*] Evaluating model predictions on training set (verification check)...
 
 --- Contract: ReentrancyVulnerable.sol ---
-  [Reentrancy] True: VULNERABLE (True) | Pred: VULNERABLE (Prob: 0.9921)
-  [Timestamp Dependency] True: SAFE (True) | Pred: SAFE (Prob: 0.0000)
-  [Arithmetic Error] True: SAFE (True) | Pred: SAFE (Prob: 0.0001)
+  [Reentrancy] True: VULNERABLE (True) | Pred: VULNERABLE (Prob: 0.5829)
+  [Timestamp Dependency] True: SAFE (True) | Pred: SAFE (Prob: 0.0006)
+  [Arithmetic Error] True: SAFE (True) | Pred: SAFE (Prob: 0.0067)
 
 --- Contract: ReentrancySafe.sol ---
-  [Reentrancy] True: SAFE (True) | Pred: SAFE (Prob: 0.0037)
-  [Timestamp Dependency] True: SAFE (True) | Pred: SAFE (Prob: 0.0000)
-  [Arithmetic Error] True: SAFE (True) | Pred: SAFE (Prob: 0.0000)
+  [Reentrancy] True: SAFE (True) | Pred: SAFE (Prob: 0.0010)
+  [Timestamp Dependency] True: SAFE (True) | Pred: SAFE (Prob: 0.1266)
+  [Arithmetic Error] True: SAFE (True) | Pred: SAFE (Prob: 0.0035)
 
 --- Contract: TimestampVulnerable.sol ---
   [Reentrancy] True: SAFE (True) | Pred: SAFE (Prob: 0.0000)
-  [Timestamp Dependency] True: VULNERABLE (True) | Pred: VULNERABLE (Prob: 0.9999)
-  [Arithmetic Error] True: SAFE (True) | Pred: SAFE (Prob: 0.0000)
+  [Timestamp Dependency] True: VULNERABLE (True) | Pred: VULNERABLE (Prob: 0.9992)
+  [Arithmetic Error] True: SAFE (True) | Pred: SAFE (Prob: 0.0001)
 
 --- Contract: TimestampSafe.sol ---
-  [Reentrancy] True: SAFE (True) | Pred: SAFE (Prob: 0.0000)
-  [Timestamp Dependency] True: SAFE (True) | Pred: SAFE (Prob: 0.0001)
-  [Arithmetic Error] True: SAFE (True) | Pred: SAFE (Prob: 0.0000)
+  [Reentrancy] True: SAFE (True) | Pred: SAFE (Prob: 0.0002)
+  [Timestamp Dependency] True: SAFE (True) | Pred: SAFE (Prob: 0.2882)
+  [Arithmetic Error] True: SAFE (True) | Pred: SAFE (Prob: 0.0106)
 
 --- Contract: ArithmeticVulnerable.sol ---
-  [Reentrancy] True: SAFE (True) | Pred: SAFE (Prob: 0.0003)
-  [Timestamp Dependency] True: SAFE (True) | Pred: SAFE (Prob: 0.0004)
-  [Arithmetic Error] True: VULNERABLE (True) | Pred: VULNERABLE (Prob: 0.9825)
+  [Reentrancy] True: SAFE (True) | Pred: SAFE (Prob: 0.0000)
+  [Timestamp Dependency] True: SAFE (True) | Pred: SAFE (Prob: 0.0007)
+  [Arithmetic Error] True: VULNERABLE (True) | Pred: VULNERABLE (Prob: 0.9988)
 
 --- Contract: ArithmeticSafe.sol ---
-  [Reentrancy] True: SAFE (True) | Pred: SAFE (Prob: 0.0029)
-  [Timestamp Dependency] True: SAFE (True) | Pred: SAFE (Prob: 0.0001)
-  [Arithmetic Error] True: SAFE (True) | Pred: SAFE (Prob: 0.0000)
+  [Reentrancy] True: SAFE (True) | Pred: SAFE (Prob: 0.0002)
+  [Timestamp Dependency] True: SAFE (True) | Pred: SAFE (Prob: 0.0003)
+  [Arithmetic Error] True: SAFE (True) | Pred: SAFE (Prob: 0.0004)

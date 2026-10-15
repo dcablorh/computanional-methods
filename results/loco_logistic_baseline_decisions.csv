@@ -1,19 +1,19 @@
 contract,class,truth,prob,pred
 ReentrancyVulnerable.sol,Reentrancy,1,0.0,0
-ReentrancyVulnerable.sol,Timestamp Dependency,0,0.1685507446527481,0
-ReentrancyVulnerable.sol,Arithmetic Error,0,0.1180678978562355,0
-ReentrancySafe.sol,Reentrancy,0,0.35194724798202515,0
-ReentrancySafe.sol,Timestamp Dependency,0,0.11085096746683121,0
-ReentrancySafe.sol,Arithmetic Error,0,0.09484074264764786,0
-TimestampVulnerable.sol,Reentrancy,0,0.22645385563373566,0
+ReentrancyVulnerable.sol,Timestamp Dependency,0,0.1021757423877716,0
+ReentrancyVulnerable.sol,Arithmetic Error,0,0.11235454678535461,0
+ReentrancySafe.sol,Reentrancy,0,0.43196427822113037,0
+ReentrancySafe.sol,Timestamp Dependency,0,0.10125474631786346,0
+ReentrancySafe.sol,Arithmetic Error,0,0.11340407282114029,0
+TimestampVulnerable.sol,Reentrancy,0,0.16266176104545593,0
 TimestampVulnerable.sol,Timestamp Dependency,1,0.0,0
-TimestampVulnerable.sol,Arithmetic Error,0,0.17111670970916748,0
-TimestampSafe.sol,Reentrancy,0,0.12799346446990967,0
-TimestampSafe.sol,Timestamp Dependency,0,0.1920831799507141,0
-TimestampSafe.sol,Arithmetic Error,0,0.07716096192598343,0
-ArithmeticVulnerable.sol,Reentrancy,0,0.19833366572856903,0
-ArithmeticVulnerable.sol,Timestamp Dependency,0,0.23338682949543,0
+TimestampVulnerable.sol,Arithmetic Error,0,0.14514772593975067,0
+TimestampSafe.sol,Reentrancy,0,0.1691361665725708,0
+TimestampSafe.sol,Timestamp Dependency,0,0.21530529856681824,0
+TimestampSafe.sol,Arithmetic Error,0,0.08518742024898529,0
+ArithmeticVulnerable.sol,Reentrancy,0,0.18575140833854675,0
+ArithmeticVulnerable.sol,Timestamp Dependency,0,0.14680702984333038,0
 ArithmeticVulnerable.sol,Arithmetic Error,1,0.0,0
-ArithmeticSafe.sol,Reentrancy,0,0.2349667251110077,0
-ArithmeticSafe.sol,Timestamp Dependency,0,0.13717077672481537,0
-ArithmeticSafe.sol,Arithmetic Error,0,0.1733066737651825,0
+ArithmeticSafe.sol,Reentrancy,0,0.1963179111480713,0
+ArithmeticSafe.sol,Timestamp Dependency,0,0.08620906621217728,0
+ArithmeticSafe.sol,Arithmetic Error,0,0.1689569503068924,0

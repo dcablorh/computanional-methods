@@ -5,14 +5,14 @@
 [*] Generating contract semantic graph (AST + CFG + PDG)...
 [+] Complete graph constructed: 73 nodes, 136 edges.
 [*] Performing Program Slicing around security interest points...
-[+] Sliced graph: 20 nodes, 36 edges (removed 53 clutter nodes).
+[+] Sliced graph: 43 nodes, 77 edges (removed 30 clutter nodes).
 [+] Loaded GNN model weights from ./model.pth
 
 ==================================================
                  AUDIT SCAN REPORT                 
 ==================================================
-[Reentrancy] Confidence: 0.29%
-[Timestamp Dependency] Confidence: 0.01%
-[Arithmetic Error] Confidence: 0.00%
+[Reentrancy] Confidence: 0.02%
+[Timestamp Dependency] Confidence: 0.03%
+[Arithmetic Error] Confidence: 0.04%
 [+] SUCCESS: No vulnerabilities detected. Contract is clean.
 ==================================================
