@@ -23,11 +23,12 @@ def find_interest_points(G):
         if "block.timestamp" in code or "now" in code:
             timestamp_refs.append(node_id)
             
-        if node_type == "BinaryOperation":
+        if node_type in ("BinaryOperation", "Assignment"):
             ast_node = data.get("ast_node", {})
             # Legacy AST (solc < 0.8) stores the operator under "attributes"
             op = ast_node.get("operator") or ast_node.get("attributes", {}).get("operator", "")
-            if op in ("+", "-", "*", "/"):
+            # Compound assignments (x += y, balance -= amount) are arithmetic too
+            if op in ("+", "-", "*", "/", "+=", "-=", "*=", "/="):
                 arithmetic_ops.append(node_id)
                 
     return {

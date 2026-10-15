@@ -110,7 +110,7 @@ def extract_node_features(node_data):
     # four keyword indicator flags
     has_call = 1.0 if any(kw in code for kw in (".call", "transfer", "send")) else 0.0
     has_timestamp = 1.0 if "block.timestamp" in code or "now" in code else 0.0
-    has_arithmetic = 1.0 if (node_type == "BinaryOperation" and any(op in code for op in ("+", "-", "*", "/"))) else 0.0
+    has_arithmetic = 1.0 if (node_type == "BinaryOperation" and any(op in code for op in ("+", "-", "*", "/"))) or (node_type == "Assignment" and any(op in code for op in ("+=", "-=", "*=", "/="))) else 0.0
     has_state_write = 1.0 if node_type in ("Assignment", "VariableDeclaration") and any(op in code for op in ("=", "+=", "-=")) else 0.0
     
     features.extend([has_call, has_timestamp, has_arithmetic, has_state_write])
