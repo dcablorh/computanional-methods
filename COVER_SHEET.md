@@ -7,8 +7,8 @@
 | Project title | Graph-Based Smart Contract Auditing: A Leave-One-Contract-Out Evaluation of a Graph Attention Network Prototype |
 | Repository | https://github.com/dcablorh/computanional-methods (public) |
 | Submitted version | Tag `submission-v1` (commit `e6efaec`, before the arithmetic fix), and the final commit on `main` (see the commit hash in the Sakai submission) |
-| Manuscript | `manuscript/FINAL_PROJECT_StudentID_FullName.pdf` (source: `manuscript/manuscript.md`) |
-| Slides | `slides/FINAL_PROJECT_Slides_StudentID_FullName.pdf` |
+| Manuscript | `manuscript/FINAL_PROJECT_22186668_Caleb_Ablorh-Adjei.pdf` (source: `manuscript/manuscript.md`) |
+| Slides | `slides/FINAL_PROJECT_Slides_22186668_Caleb_Ablorh-Adjei.pdf` |
 | AI-use disclosure | `AI_USE.md` |
 
 ## Where to start reviewing
