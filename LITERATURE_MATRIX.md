@@ -20,7 +20,7 @@ Every entry below was checked with a search against the publisher, arXiv or conf
 
 ## Searched but not used
 
-These references appeared in the earlier draft (`archive/reseach.md`). Searches did not confirm them, so they were removed from the manuscript:
+These references appeared in the earlier draft (git commit `2c09deb`). Searches did not confirm them, so they were removed from the manuscript:
 
 - Cai et al. (2023), *Journal of Systems and Software*, "Combine sliced joint graph with graph neural networks…": no record found.
 - Luo & Luo (2023), "VulDet", AIBT: no record found.

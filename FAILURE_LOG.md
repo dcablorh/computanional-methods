@@ -20,7 +20,7 @@ Problems found while preparing this project, what they affected, and what was do
 
 ### F3. The reported retraining figures could not be reproduced from the repository
 
-- **Found:** the earlier draft (`archive/reseach.md`) reported two retrain confidences (97.73% unseeded, 99.43% seeded) for `ReentrancyVulnerable.sol`. No log or script in the repository produced them.
+- **Found:** the earlier draft (removed from the repository; see git commit `2c09deb`) reported two retrain confidences (97.73% unseeded, 99.43% seeded) for `ReentrancyVulnerable.sol`. No log or script in the repository produced them.
 - **Cause:** those runs were made by hand and were not saved.
 - **Fix:** the figures were removed from the manuscript. Training now uses a fixed seed (`trainer.py` seeds before model creation), and the training output is saved (`results/logs/train.txt`).
 

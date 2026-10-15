@@ -20,7 +20,7 @@
 | Hidden size | 64 |
 | Dropout | 0.1 in both GAT layers |
 
-The committed `model.pth` was produced by `python trainer.py` on the corrected labels (see `FAILURE_LOG.md`, F1 and F2).
+The committed `model.pth` was produced by `python trainer.py` on the corrected labels and the corrected arithmetic check (see `FAILURE_LOG.md`, F1, F2 and F12). Re-running `trainer.py` reproduces it byte for byte.
 
 ## Decision rules
 
@@ -36,6 +36,7 @@ Results are in `results/metrics.json` and `notebooks/02_loco_evaluation.ipynb`.
 |---|---|---|---|---|
 | Trained and tested on the same six contracts (saved weights, 18 decisions) | 1.000 | 1.000 | 1.000 | 1.000 |
 | Leave-one-contract-out, mean of 5 seeds (18 decisions) | 0.000 | 0.000 | 0.000 | 0.778 (identical across seeds) |
+| External test: six new contracts, trained on all six demo contracts (18 decisions; not independent, see `FAILURE_LOG.md` F12) | 1.000 | 1.000 | 1.000 | 1.000 |
 
 The first row measures how well the model fits its training data. The second row is the number that matters for unseen contracts: the model does not flag any held-out vulnerable contract. Localization under leave-one-out is 0 for all 15 vulnerable-contract evaluations (3 contracts × 5 seeds).
 

@@ -68,7 +68,6 @@ All three are executed and their outputs are saved in the files.
 | AI-use disclosure | `AI_USE.md` |
 | Failure log | `FAILURE_LOG.md` |
 | Reproducibility checklist | `REPRODUCIBILITY_CHECKLIST.md` |
-| Earlier draft (superseded) | `archive/` |
 
 ## Project layout
 
