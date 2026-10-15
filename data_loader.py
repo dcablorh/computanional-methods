@@ -17,7 +17,7 @@ DEMO_LABEL_INFO = {
     },
     "TimestampVulnerable.sol": {
         "vuln_class": 1, # Timestamp Dependency
-        "vulnerable_lines": [10] # require(block.timestamp % 15 == 0)
+        "vulnerable_lines": [9] # require(block.timestamp % 15 == 0)
     },
     "TimestampSafe.sol": {
         "vuln_class": 1,
@@ -25,7 +25,7 @@ DEMO_LABEL_INFO = {
     },
     "ArithmeticVulnerable.sol": {
         "vuln_class": 2, # Arithmetic Error
-        "vulnerable_lines": [14] # totalAmount = receivers.length * amount
+        "vulnerable_lines": [12] # totalAmount = receivers.length * amount
     },
     "ArithmeticSafe.sol": {
         "vuln_class": 2,
