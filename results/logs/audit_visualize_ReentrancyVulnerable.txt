@@ -1,0 +1,22 @@
+
+[*] Starting security audit on: demo_contracts/ReentrancyVulnerable.sol
+[*] Detected pragma version requirement. Using solc 0.8.20
+[*] Compiling demo_contracts/ReentrancyVulnerable.sol...
+[*] Generating contract semantic graph (AST + CFG + PDG)...
+[+] Complete graph constructed: 59 nodes, 109 edges.
+[*] Performing Program Slicing around security interest points...
+[+] Sliced graph: 23 nodes, 43 edges (removed 36 clutter nodes).
+[+] Loaded GNN model weights from ./model.pth
+
+==================================================
+                 AUDIT SCAN REPORT                 
+==================================================
+[Reentrancy] Confidence: 99.21%
+  >>> ALERT: Potential Reentrancy vulnerability detected!
+  >>> Vulnerable Code Localization (GNN Node Saliency):
+      [Line 015]: (bool sent, ) = msg.sender.call{value: bal}("")
+      [Line 016]: require(sent, "Failed to send")
+[+] Saved audit graph visualization to ReentrancyVulnerable_audit.png
+--------------------------------------------------
+[Timestamp Dependency] Confidence: 0.00%
+[Arithmetic Error] Confidence: 0.01%

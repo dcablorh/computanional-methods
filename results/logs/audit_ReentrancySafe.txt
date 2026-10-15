@@ -1,0 +1,18 @@
+
+[*] Starting security audit on: demo_contracts/ReentrancySafe.sol
+[*] Detected pragma version requirement. Using solc 0.8.20
+[*] Compiling demo_contracts/ReentrancySafe.sol...
+[*] Generating contract semantic graph (AST + CFG + PDG)...
+[+] Complete graph constructed: 59 nodes, 109 edges.
+[*] Performing Program Slicing around security interest points...
+[+] Sliced graph: 25 nodes, 47 edges (removed 34 clutter nodes).
+[+] Loaded GNN model weights from ./model.pth
+
+==================================================
+                 AUDIT SCAN REPORT                 
+==================================================
+[Reentrancy] Confidence: 0.37%
+[Timestamp Dependency] Confidence: 0.00%
+[Arithmetic Error] Confidence: 0.00%
+[+] SUCCESS: No vulnerabilities detected. Contract is clean.
+==================================================

@@ -1,0 +1,19 @@
+
+[*] Starting security audit on: demo_contracts/ArithmeticVulnerable.sol
+[*] Detected pragma version requirement. Using solc 0.7.6
+[*] Compiling demo_contracts/ArithmeticVulnerable.sol...
+[*] Generating contract semantic graph (AST + CFG + PDG)...
+[+] Complete graph constructed: 73 nodes, 96 edges.
+[*] Performing Program Slicing around security interest points...
+[+] Sliced graph: 6 nodes, 7 edges (removed 67 clutter nodes).
+[+] Loaded GNN model weights from ./model.pth
+
+==================================================
+                 AUDIT SCAN REPORT                 
+==================================================
+[Reentrancy] Confidence: 0.00%
+[Timestamp Dependency] Confidence: 0.02%
+[Arithmetic Error] Confidence: 99.73%
+  >>> ALERT: Potential Arithmetic Error vulnerability detected!
+      Unable to localize exact line (low node confidence).
+--------------------------------------------------

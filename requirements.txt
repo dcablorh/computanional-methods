@@ -2,3 +2,4 @@ torch
 networkx
 py-solc-x
 matplotlib
+scikit-learn

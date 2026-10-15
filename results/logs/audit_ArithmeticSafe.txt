@@ -1,0 +1,18 @@
+
+[*] Starting security audit on: demo_contracts/ArithmeticSafe.sol
+[*] Detected pragma version requirement. Using solc 0.8.20
+[*] Compiling demo_contracts/ArithmeticSafe.sol...
+[*] Generating contract semantic graph (AST + CFG + PDG)...
+[+] Complete graph constructed: 73 nodes, 136 edges.
+[*] Performing Program Slicing around security interest points...
+[+] Sliced graph: 20 nodes, 36 edges (removed 53 clutter nodes).
+[+] Loaded GNN model weights from ./model.pth
+
+==================================================
+                 AUDIT SCAN REPORT                 
+==================================================
+[Reentrancy] Confidence: 0.29%
+[Timestamp Dependency] Confidence: 0.01%
+[Arithmetic Error] Confidence: 0.00%
+[+] SUCCESS: No vulnerabilities detected. Contract is clean.
+==================================================

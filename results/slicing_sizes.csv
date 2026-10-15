@@ -1,0 +1,7 @@
+contract,full_nodes,sliced_nodes,full_edges,sliced_edges
+ReentrancyVulnerable.sol,59,23,109,43
+ReentrancySafe.sol,59,25,109,47
+TimestampVulnerable.sol,26,13,43,22
+TimestampSafe.sol,25,19,40,32
+ArithmeticVulnerable.sol,73,8,96,9
+ArithmeticSafe.sol,73,20,136,36

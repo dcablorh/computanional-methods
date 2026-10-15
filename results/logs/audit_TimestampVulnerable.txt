@@ -1,0 +1,20 @@
+
+[*] Starting security audit on: demo_contracts/TimestampVulnerable.sol
+[*] Detected pragma version requirement. Using solc 0.8.20
+[*] Compiling demo_contracts/TimestampVulnerable.sol...
+[*] Generating contract semantic graph (AST + CFG + PDG)...
+[+] Complete graph constructed: 26 nodes, 43 edges.
+[*] Performing Program Slicing around security interest points...
+[+] Sliced graph: 13 nodes, 22 edges (removed 13 clutter nodes).
+[+] Loaded GNN model weights from ./model.pth
+
+==================================================
+                 AUDIT SCAN REPORT                 
+==================================================
+[Reentrancy] Confidence: 0.00%
+[Timestamp Dependency] Confidence: 99.99%
+  >>> ALERT: Potential Timestamp Dependency vulnerability detected!
+  >>> Vulnerable Code Localization (GNN Node Saliency):
+      [Line 009]: "Not the lucky second"
+--------------------------------------------------
+[Arithmetic Error] Confidence: 0.00%

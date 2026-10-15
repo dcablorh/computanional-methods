@@ -1,0 +1,18 @@
+
+[*] Starting security audit on: demo_contracts/TimestampSafe.sol
+[*] Detected pragma version requirement. Using solc 0.8.20
+[*] Compiling demo_contracts/TimestampSafe.sol...
+[*] Generating contract semantic graph (AST + CFG + PDG)...
+[+] Complete graph constructed: 25 nodes, 40 edges.
+[*] Performing Program Slicing around security interest points...
+[+] Sliced graph: 19 nodes, 32 edges (removed 6 clutter nodes).
+[+] Loaded GNN model weights from ./model.pth
+
+==================================================
+                 AUDIT SCAN REPORT                 
+==================================================
+[Reentrancy] Confidence: 0.00%
+[Timestamp Dependency] Confidence: 0.01%
+[Arithmetic Error] Confidence: 0.00%
+[+] SUCCESS: No vulnerabilities detected. Contract is clean.
+==================================================

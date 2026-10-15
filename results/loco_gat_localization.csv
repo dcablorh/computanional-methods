@@ -1,0 +1,16 @@
+seed,contract,gold_lines,predicted_lines,precision,recall,flagged
+0,ReentrancyVulnerable.sol,15 16,,0.0,0.0,0
+0,TimestampVulnerable.sol,9,,0.0,0.0,0
+0,ArithmeticVulnerable.sol,12,,0.0,0.0,0
+1,ReentrancyVulnerable.sol,15 16,,0.0,0.0,0
+1,TimestampVulnerable.sol,9,,0.0,0.0,0
+1,ArithmeticVulnerable.sol,12,,0.0,0.0,0
+2,ReentrancyVulnerable.sol,15 16,,0.0,0.0,0
+2,TimestampVulnerable.sol,9,,0.0,0.0,0
+2,ArithmeticVulnerable.sol,12,,0.0,0.0,0
+3,ReentrancyVulnerable.sol,15 16,,0.0,0.0,0
+3,TimestampVulnerable.sol,9,,0.0,0.0,0
+3,ArithmeticVulnerable.sol,12,,0.0,0.0,0
+4,ReentrancyVulnerable.sol,15 16,,0.0,0.0,0
+4,TimestampVulnerable.sol,9,,0.0,0.0,0
+4,ArithmeticVulnerable.sol,12,,0.0,0.0,0
