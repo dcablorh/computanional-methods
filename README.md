@@ -2,7 +2,7 @@
 
 A research prototype that audits Solidity contracts for three vulnerability classes (Reentrancy, Timestamp Dependency, Arithmetic Error). It compiles the contract, builds an AST + CFG + PDG graph, slices the graph around security-relevant statements, and classifies it with a Graph Attention Network (GAT) that produces a contract-level verdict and node-level localization.
 
-**Author:** [Student Name], Student ID [Student ID]. The manuscript is `manuscript/FINAL_PROJECT_StudentID_FullName.pdf`; the slides are in `slides/`.
+**Author:** Caleb Ablorh-Adjei, Student ID 22186668. The manuscript is `manuscript/FINAL_PROJECT_StudentID_FullName.pdf`; the slides are in `slides/`.
 
 **Short version of the result:** the model fits its six training contracts perfectly, but under leave-one-contract-out it flags none of the held-out vulnerable contracts. A rule that flags any contract containing the relevant sink has higher recall. On six new contracts the trained model finds all three vulnerable ones, but that test informed an arithmetic fix, so it is not an independent result. See `results/metrics.json`, `results/external_test/metrics.json`, and `notebooks/02_loco_evaluation.ipynb` and `notebooks/04_external_test.ipynb`.
 
@@ -55,7 +55,8 @@ All three are executed and their outputs are saved in the files.
 
 | Item | Location |
 |---|---|
-| Manuscript (PDF) | `manuscript/FINAL_PROJECT_StudentID_FullName.pdf` (source: `manuscript/manuscript.html`) |
+| Manuscript | `manuscript/FINAL_PROJECT_StudentID_FullName.pdf` (sources: `manuscript/manuscript.md`, `manuscript/manuscript.html`) |
+| Cover sheet | `COVER_SHEET.md` |
 | Slides (PDF) | `slides/` |
 | Metrics (all numbers in the manuscript) | `results/metrics.json`, `results/*.csv` |
 | Logs (training, audits, evaluation, notebook runs) | `results/logs/` |
@@ -85,6 +86,12 @@ All three are executed and their outputs are saved in the files.
 | `test_contracts/` | Six new contracts used for the external test |
 | `demo_contracts/` | Six demo contracts: a vulnerable and a safe version of each class |
 | `model.pth` | Trained weights (corrected labels; see `FAILURE_LOG.md`) |
+
+## Data access and restrictions
+
+- All data are the 12 Solidity files in `demo_contracts/` and `test_contracts/`, written for this project. No deployed contract, personal data or third-party dataset is included or used.
+- No credentials, API keys or private data are in the repository. The repository is public.
+- Public benchmarks named in the report (SmartBugs, SolidiFI) are not included and need their own access check before use.
 
 ## Limitations
 
